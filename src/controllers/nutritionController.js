@@ -48,7 +48,7 @@ const classifyNutritionHandler = async (request, h) => {
 
     console.log('Payload yang dikirim ke Flask:', inputPayload);
 
-    const response = await axios.post('http://127.0.0.1:5000/predict', inputPayload);
+    const response = await axios.post('https://meachin-production.up.railway.app/predict', inputPayload);
 
     console.log('Response dari Flask:', response.data); 
 
