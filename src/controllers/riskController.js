@@ -82,7 +82,7 @@ const classifyRiskHandler = async (request, h) => {
 
     console.log('Payload ke Flask:', inputPayload);
 
-    const response = await axios.post('http://127.0.0.1:5000/predict-risk', inputPayload);
+    const response = await axios.post('https://meachin-production.up.railway.app/predict-risk', inputPayload);
     const { prediction: riskResult, confidence } = response.data;
 
     if (!riskResult || typeof confidence !== 'number') {
